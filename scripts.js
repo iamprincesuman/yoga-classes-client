@@ -40,8 +40,11 @@ function sendFormData(formData, apiEndpoint) {
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        
-            alert(JSON.stringify(data));
+        if(data.error) {
+            alert(JSON.stringify(data.error));
+        } else {
+            alert(JSON.stringify(data.message));
+        }
         
     })
     .catch((error) => {
