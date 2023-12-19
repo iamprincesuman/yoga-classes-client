@@ -41,7 +41,7 @@ function sendFormData(formData, apiEndpoint) {
     .then(data => {
         console.log('Success:', data);
         
-            alert(JSON.stringify(data.message));
+            alert(JSON.stringify(data));
         
     })
     .catch((error) => {
